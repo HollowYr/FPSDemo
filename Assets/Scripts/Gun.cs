@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private float shotRange = 100f;
     [SerializeField] private float damage = 3f;
     [SerializeField] private ParticleSystem muzzleFlash;
+    [SerializeField] private GameObject hitFlash;
     PlayerInput playerInput;
     Vector3 rayStartPosition;
     Vector3 rayHitPosition;
@@ -33,6 +34,9 @@ public class Gun : MonoBehaviour
             {
                 target.TakeDamage(damage);
             }
+
+
+            Destroy(Instantiate(hitFlash, hit.point, Quaternion.LookRotation(hit.normal)), 2f);
         }
     }
 
@@ -40,6 +44,6 @@ public class Gun : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(rayStartPosition, rayHitPosition);
-        Gizmos.DrawSphere(rayHitPosition, .5f);
+        //Gizmos.DrawSphere(rayHitPosition, .5f);
     }
 }
