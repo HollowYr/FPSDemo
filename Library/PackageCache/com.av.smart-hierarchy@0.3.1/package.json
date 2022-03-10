@@ -1,0 +1,23 @@
+{
+  "name": "com.av.smart-hierarchy",
+  "version": "0.3.1",
+  "displayName": "Smart Hierarchy",
+  "description": "Brings intuitive features and important visual elements for Hierarchy.",
+  "keywords": [
+    "editor",
+    "smart",
+    "hierarchy",
+    "tools",
+    "utility",
+    "extensions"
+  ],
+  "author": {
+    "name": "Alternative Visual",
+    "email": "alternativevisualgames@gmail.com",
+    "url": "https://github.com/neon-age/Smart-Hierarchy"
+  },
+  "unity": "2019.3",
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  }
+}
